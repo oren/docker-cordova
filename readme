@@ -14,3 +14,7 @@ cdv npm update # Update my app dependecies
 
 if you get issue with dns uncomment DOCKER_OPTS="--dns 8.8.8.8 --dns 8.8.4.4" in /etc/default/docker
 and sudo service docker restart
+
+
+http://stackoverflow.com/questions/25210604/setting-up-a-development-environment-with-docker
+https://github.com/nicopace/ionic-cordova-android-vagrant-docker/blob/master/Dockerfile#L50

@@ -11,6 +11,7 @@ ENV DEBIAN_FRONTEND noninteractive
 # RUN apt-get -y install python-software-properties git
 RUN apt-get update && apt-get install -y \
   build-essential \
+  python-software-properties \
   git \
   bzip2 \
   wget \
