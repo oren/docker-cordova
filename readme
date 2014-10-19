@@ -3,9 +3,9 @@ docker build -t cordova .
 # special permission for usb
 # mount usb volume
 # mount current folder
-docker run -i --privileged -v /dev/bus/usb:/dev/bus/usb -v $(pwd):/app -p 3000:3000 oreng/cordova
+docker run --rm -it --privileged -v /dev/bus/usb:/dev/bus/usb -v $(pwd):/app -p 3000:3000 cordova /bin/bash
 
-alias cdv='docker run -i --privileged -v /dev/bus/usb:/dev/bus/usb -v $(pwd):/app -p 3000:3000 oreng/cordova'
+alias cdv='docker run -it --privileged -v /dev/bus/usb:/dev/bus/usb -v $(pwd):/app -p 3000:3000 cordova'
 
 cdv adb devices # List usb devices
 cdv cordova build android # Build app
@@ -14,7 +14,6 @@ cdv npm update # Update my app dependecies
 
 if you get issue with dns uncomment DOCKER_OPTS="--dns 8.8.8.8 --dns 8.8.4.4" in /etc/default/docker
 and sudo service docker restart
-
 
 http://stackoverflow.com/questions/25210604/setting-up-a-development-environment-with-docker
 https://github.com/nicopace/ionic-cordova-android-vagrant-docker/blob/master/Dockerfile#L50
