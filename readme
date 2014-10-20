@@ -17,3 +17,8 @@ and sudo service docker restart
 
 http://stackoverflow.com/questions/25210604/setting-up-a-development-environment-with-docker
 https://github.com/nicopace/ionic-cordova-android-vagrant-docker/blob/master/Dockerfile#L50
+
+## push
+docker tag cordova oreng/cordova:1.0.0
+docker push oreng/cordova:1.0.0
+
