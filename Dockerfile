@@ -18,8 +18,14 @@ RUN apt-get update && apt-get install -y \
   ant \
   openjdk-7-jre \
   openjdk-7-jdk \
+  lib32z1 \
+  lib32z1-dev \
+  lib32stdc++6 \
   --no-install-recommends \
   && rm -rf /var/lib/apt/lists/*
+
+# lib32z1 lib32z1-dev lib32stdc++6 are needed to be able to run adb
+# software-properties-common Needed to be able to run add-apt-repository
 
 # Make sure the package repository is up to date
 # RUN echo "deb http://archive.ubuntu.com/ubuntu trusty main universe" > /etc/apt/sources.list
@@ -41,7 +47,7 @@ ENV PATH $PATH:$ANDROID_HOME/platform-tools
 # Install latest android (19 / 4.4.2) tools and system image.
 RUN echo "y" | android update sdk --no-ui --force --filter platform-tools,android-19,build-tools-20.0.0
 
-#Install nodejs
+# Install nodejs
 RUN add-apt-repository -y ppa:chris-lea/node.js && \
     apt-get update -qq && \
     apt-get install -y nodejs
