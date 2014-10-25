@@ -28,6 +28,10 @@ android update sdk -u
 	sudo apt-get install lib32z1 lib32z1-dev  
 	sudo apt-get install lib32stdc++6
 
+**cordova build =>  [Error: Failed to run "android". Make sure you have the latest Android SDK installed, and that the "android" command (inside the tools/ folder) is added to your PATH.]**
+
+  ?
+
 ## start a cordova project
 
 	cordova create Hello com.example.hello "Hello"
