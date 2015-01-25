@@ -2,7 +2,7 @@
 
 * [Setup](#setup)
 * [New Project](#new-project)
-* [Miscellaneous](#Miscellaneous)
+* [Miscellaneous](#miscellaneous)
 
 ## Setup
 
