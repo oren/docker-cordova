@@ -3,6 +3,7 @@
 * [Setup](#setup)
 * [New Project](#new-project)
 * [Miscellaneous](#miscellaneous)
+* [References](#references)
 
 ## Setup
 
@@ -43,4 +44,8 @@ I keep all my dockerfiles in a folder:
         └── readme
 
 The readme has the build command. For emample - `docker build -t cordova .`. I just run it once and add an alias to my .bash_profile
+
+## References
+
+The image is https://registry.hub.docker.com/u/peernohell/cordova. I modified the `run` command to add support for USB connection.
 
