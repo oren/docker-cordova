@@ -1,5 +1,7 @@
 # Docker container for Cordova development
 
+![docker-badge](http://dockeri.co/image/oreng/cordova)
+
 ![demo-video](demo-video.gif)
 
 ## Content
