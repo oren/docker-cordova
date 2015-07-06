@@ -9,7 +9,7 @@
 * [why](#why)
 * [Setup](#setup)
 * [New Project](#new-project)
-* [Miscellaneous](#miscellaneous)
+* [Useful commands](#useful-commands)
 * [References](#references)
 
 ## Why?
