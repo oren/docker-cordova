@@ -42,9 +42,19 @@ That's it, your app should be on your phone!
 
 ## Useful commands
 
-List of attached devices. make sure you see your phone in that list.
+### List of attached devices
 
-    docker run --rm -i -v $(pwd):/workspace -w /workspace --privileged -v /dev/bus/usb:/dev/bus/usb cordova adb devices
+Make sure you see your phone in that list.
+
+    docker run --rm -i -v $(pwd):/workspace -w /workspace \
+        --privileged -v /dev/bus/usb:/dev/bus/usb cordova adb devices
+
+### Run with different user
+
+To ensure the container uses the same user id as the caller use the
+-u option and provide a writeable HOME directory to that user (change the alias if necessary!)
+
+    alias cordova='docker run --rm -i -u `id -u` -v $PWD:/src -e "HOME=/tmp" cordova cordova'
 
 ## References
 
